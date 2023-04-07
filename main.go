@@ -3,10 +3,16 @@ package main
 import (
 	"flag"
 	"log"
+
+	"tg-saving-links/clients/telegram/telegram"
+)
+
+const (
+	host = "api.telegram.org"
 )
 
 func main() {
-	t := mustToken()
+	c := telegram.NewClient(mustToken())
 }
 
 func mustToken() string {
